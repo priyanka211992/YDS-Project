@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="py-5">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        
+  
+       
+        <div class="card rounded-0">
+          <div class="card-header">
+            <h3 class="mb-0">Login</h3>
+          </div>
+          <div class="card-body">
+            <form class="form">
+              <div class="row">
+                <label for="">Email</label>
+                <input [(ngModel)]="loginUserData.email" name="email" type="text" class="col-sm-8" required>
+              </div>
+              <div class="row">
+                <label for="">Password</label>
+                <!-- <input [(ngModel)]="loginUserData.password" name="password" type="password"  class="form-control rounded-0"  required> -->
+                <input [(ngModel)]="loginUserData.password" name="password" [type]="password" class="col-sm-8"  required>
+                <button (click)="onClick()">
+                  <i class="fa fa-eye" aria-hidden="true" *ngIf="show"></i>
+                  <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="!show"></i>
+                </button>
+              </div>
+              <button (click)="loginUser()" type="button" class="btn btn-success float-right">Login</button><br>
+              <h5 class="mb-0">Not a member yet?</h5><a [routerLink]="" (click)="registerMe()">Click me</a>
+              
+            
+            </form>
+
+          </div>
+          <!--/card-block-->
+        </div>
+        <!-- /form card login -->
+  
+      </div>
+  
+  
+    </div>
+  </div>
